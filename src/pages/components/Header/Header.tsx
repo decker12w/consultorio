@@ -1,34 +1,23 @@
-import { MdDarkMode } from "react-icons/md";
-import HeaderLinks from "./HeaderLinks";
-import { AiOutlineMenu } from "react-icons/ai";
-import { useState } from "react";
-import NavBar from "./NavBar";
 import Logo from "./Logo";
-
+import AgendeButton from "./AgendeButton";
+import NavLinks from "./NavLinks";
+import NavMenu from "./NavMenu";
 
 export default function Header() {
-  const [menuOpen, setMenuOpen] = useState(false)
-  function menu() {
-    setMenuOpen(!menuOpen)
-  }
-
+  const data = [
+    { link: "/", title: "Início" },
+    { link: "/#local", title: "Local" },
+    { link: "/tratamentos", title: "Tratamentos" },
+    { link: "/depoimentos", title: "Depoimentos" },
+    { link: "/contato", title: "Contato" },
+  ];
 
   return (
-    <header className={`bg-black flex flex-row p-4 flex-wrap justify-center lg:justify-between lg:px-32
-     items-center sticky top-0 w-full z-50`}>
+    <header className="bg-black h-28 flex flex-row items-center justify-around w-full sticky top-0 z-50 ">
       <Logo></Logo>
-      <div className="flex w-full lg:w-auto justify-between md:justify-between items-center">
-          <div className="hidden md:block">
-              <HeaderLinks />
-          </div>
-
-            <NavBar open={menuOpen} onClick={menu} className={`${menuOpen ? 'translate-x-[-4vw]' : ''}`}></NavBar>
-
-            <div className={`transition-all duration-200 ease-in z-20 
-                hover:text-white cursor-pointer rounded-full hover:bg-black p-2`}>
-                <MdDarkMode className="w-9 h-9" />
-            </div>
-      </div>
+      <NavLinks data={data}></NavLinks>
+      <AgendeButton></AgendeButton>
+      <NavMenu></NavMenu>
     </header>
-  )
+  );
 }
