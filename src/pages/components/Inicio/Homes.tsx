@@ -5,7 +5,7 @@ export default function Homes() {
   return (
     <section className='flex flex-col-reverse items-center lg:flex-row lg:justify-center mt-7 lg:gap-24' id='home'>
     <div className='max-w-[90%] lg:max-w-[627px] flex flex-col justify-center items-center mt-12' >
-            <h1 className='text-4xl lg:text-6xl  mb-14 text-left'>Uma excelente experiencia Odontológica</h1>
+            <h1 className='text-5xl lg:text-6xl  mb-14 text-left'>Uma excelente experiencia Odontológica</h1>
             <p className='text-sm lg:text-base mb-9 text-left'>Consultório odontológico com foco no tratamento humanizado e na saúde do paciente.
 Realizamos procedimentos de competência do clínico geral, além de próteses, implantes, tratamento de canal, 
 clareamento, facetas e muito mais.</p>

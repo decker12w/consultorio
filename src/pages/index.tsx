@@ -3,6 +3,8 @@ import Header from './components/Header/Header'
 import Image from 'next/image'
 import Homes from './components/Inicio/Homes'
 import Local from './components/LocalTrab/Local'
+import Tratamentos from './components/Tratamentos/Tratamentos'
+import Depoimentos from './components/Depoimentos/Depoimentos'
 
 
 
@@ -15,6 +17,8 @@ export default function Home() {
             <Header></Header>
             <Homes></Homes>
             <Local></Local>
+            <Tratamentos></Tratamentos>
+            <Depoimentos></Depoimentos>
       </div>
   )
 }
